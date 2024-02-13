@@ -30,7 +30,7 @@ io.on('connection', (client:any) => {
   client.on('message', (msg:any) => {
     console.log('Mensaje recibido:', msg);
 
-    client.emit('message', { server: 'receipt data test' });
+    client.emit('message', { server: 'receipt data test' }); 
   });
 });
 
