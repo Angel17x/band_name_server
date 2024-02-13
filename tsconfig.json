@@ -1,0 +1,22 @@
+{
+  "compilerOptions": {
+    "target": "ESNext", // Compila a la última versión de ECMAScript compatible con tu versión de TypeScript
+    "module": "ESNext", // Utiliza la sintaxis de módulos más reciente
+    "strict": true, // Activa todas las opciones estrictas para maximizar la rigurosidad de la verificación de tipos
+    "esModuleInterop": true, // Permite la interoperabilidad por defecto para importar módulos CommonJS
+    "skipLibCheck": true, // Omite la comprobación de tipos en todas las declaraciones de las librerías (archivos .d.ts)
+    "forceConsistentCasingInFileNames": true, // Asegura que el caso de las letras en los nombres de archivos sea consistente en las importaciones
+    "outDir": "./dist", // Directorio para los archivos de salida
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "moduleResolution": "node", // Estrategia de resolución de módulos de Node.js (necesaria para importaciones fuera de los módulos ESNext)
+    "baseUrl": "./", // Base del directorio para la resolución de módulos no relativos
+    "paths": { // Puede ser usado para configurar alias de importación
+      "*": ["node_modules/*", "src/types/*"]
+    },
+    "resolveJsonModule": true, // Permite importar archivos .json directamente
+    "allowSyntheticDefaultImports": true // Permite importar entidades de módulos CommonJS/AMD/UMD como si tuvieran un export default
+  },
+  "include": ["src/**/*"], // Incluye todos los archivos dentro del directorio src para la compilación
+  "exclude": ["node_modules", "**/*.spec.ts"] // Excluye node_modules y todos los archivos de pruebas de la compilación
+}

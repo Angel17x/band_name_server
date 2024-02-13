@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SocketIo Server</title>
+</head>
+<body>
+  <h1>Access Denied</h1>
+  <script src="socket.io/socket.io.js"></script>
+  <script>
+    var socket = io();
+    socket.on('connect', () => {
+      console.log('Un cliente se ha conectado');
+    });
+    socket.on('disconnect', () => {
+      console.log('Un cliente se ha desconectado');
+    });
+    socket.emit('message', { name: 'Angel Lugo' });
+    socket.on('message', (data) => {
+      console.log(data);
+    });
+  </script>
+</body>
+</html>

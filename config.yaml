@@ -1,0 +1,8 @@
+server:
+  port: 3000
+database: 
+  dbname: ''
+  user: ''
+  password: ''
+  host: ''
+  port: ''
